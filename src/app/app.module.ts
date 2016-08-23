@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
+import {HttpModule} from '@angular/http';
+import {PokedexService} from './pokedex.service';
 @NgModule({
   declarations: [
     AppComponent
@@ -11,9 +13,11 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+// you have to import HTTP service
+    HttpModule
   ],
-  providers: [],
+  providers: [PokedexService],
   entryComponents: [AppComponent],
   bootstrap: [AppComponent]
 })
